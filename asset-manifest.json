@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/Guardami/static/css/main.effd5962.css",
+    "main.js": "/Guardami/static/js/main.b90ca957.js",
+    "static/js/787.d4aba7ab.chunk.js": "/Guardami/static/js/787.d4aba7ab.chunk.js",
+    "static/media/nero.png": "/Guardami/static/media/nero.b3fe0d7e0f9293b16f18.png",
+    "static/media/noce.png": "/Guardami/static/media/noce.d0b2aed16453562a3b67.png",
+    "static/media/3.jpg": "/Guardami/static/media/3.7c7bb62a264004b6cde8.jpg",
+    "static/media/1.png": "/Guardami/static/media/1.c2b380abae1c32e91e80.png",
+    "static/media/frassino.png": "/Guardami/static/media/frassino.56b70d12e00613c9b0d9.png",
+    "static/media/noce_back.jpg": "/Guardami/static/media/noce_back.e0ecf1b74e73eba38969.jpg",
+    "static/media/2.png": "/Guardami/static/media/2.0d4321d6979a8b1ffc09.png",
+    "static/media/nero_back.jpg": "/Guardami/static/media/nero_back.dbcf09c851543f95034c.jpg",
+    "static/media/6.jpg": "/Guardami/static/media/6.3b5ba5012cf51f25445d.jpg",
+    "static/media/frassino_back.jpg": "/Guardami/static/media/frassino_back.c7275ec152a483f8ea9a.jpg",
+    "static/media/4.JPG": "/Guardami/static/media/4.da3a5944336ef76335bb.JPG",
+    "static/media/3_no.png": "/Guardami/static/media/3_no.a230148025cefe5710cd.png",
+    "static/media/5.jpg": "/Guardami/static/media/5.4bed8d487480738b56f9.jpg",
+    "static/media/outward-borders.ttf": "/Guardami/static/media/outward-borders.c60c87b248bd3ad55f67.ttf",
+    "static/media/KaushanScript-Regular.ttf": "/Guardami/static/media/KaushanScript-Regular.a668b3d996f7c50fb3fe.ttf",
+    "static/media/outward-round.ttf": "/Guardami/static/media/outward-round.97f636d6e83336bdfb70.ttf",
+    "static/media/InstrumentSerif-Regular.ttf": "/Guardami/static/media/InstrumentSerif-Regular.dd726bb91a354547f0d3.ttf",
+    "static/media/ZESSTYPE-GRAFIKA.ttf": "/Guardami/static/media/ZESSTYPE-GRAFIKA.8cf37fc1b4e24d33bc40.ttf",
+    "static/media/logo_noscritte.svg": "/Guardami/static/media/logo_noscritte.6bca66932ccc2c865db2c2a9c5a4b668.svg",
+    "index.html": "/Guardami/index.html",
+    "main.effd5962.css.map": "/Guardami/static/css/main.effd5962.css.map",
+    "main.b90ca957.js.map": "/Guardami/static/js/main.b90ca957.js.map",
+    "787.d4aba7ab.chunk.js.map": "/Guardami/static/js/787.d4aba7ab.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.effd5962.css",
+    "static/js/main.b90ca957.js"
+  ]
+}
