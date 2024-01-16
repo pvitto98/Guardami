@@ -1,0 +1,144 @@
+        <ParallaxLayer
+          offset={1.25}
+          speed={0.2} // increased speed for the image
+          style={{
+            position: "relative", // add this line
+            alignItems: "center",
+            zIndex: 1,
+          }}
+        >
+          <img
+            src={downscaledImage}
+            alt="Image2"
+            style={{
+              position: "absolute",
+              top: "-5%",
+              right: "-10%",
+              width: "70%",
+              animation: "bounce 2s infinite",
+            }}
+          />
+        </ParallaxLayer>
+
+        <ParallaxLayer
+          offset={1.43}
+          speed={0.4} // slightly slower speed for the title
+          style={{
+            display: "flex",
+            justifyContent: "flex-start",
+          }}
+        >
+          <div
+            className={`${styles.loremIpsumLorem} ${styles.headerText}`} // Apply the 'text-big-bold' class
+            style={{ marginLeft: "7%", fontSize: "5em", color: "#3d3d3f" }} // Increase the font size here
+          >{`Cos'è Guardami`}</div>
+        </ParallaxLayer>
+
+        <ParallaxLayer
+          offset={1.45}
+          speed={2} // slightly slower speed for the title
+          style={{
+            display: "flex",
+            justifyContent: "flex-start",
+            alignItems: "center",
+          }}
+        >
+          <div
+            style={{
+              marginLeft: "8%",
+              textAlign: "left",
+              fontSize: "2em",
+              lineHeight: "2em",
+              color: "#3a4660",
+            }}
+          >
+            Guardami è un manufatto in legno. Guardami è un oggetto di design
+            <br />
+            Guardami è un contenitore e un contenuto. Guardami è un manufatto
+            <br />
+            artigianale che rende visibile la bellezza che cerchiamo, l’arte,
+            <br />
+            la musica, la cultura. È nato per i libri, ma la cultura si sa...
+            <br />
+            non ha limiti. Guardami è nato da un'intuizione creativa, scaturita
+            <br />
+            dal bisogno di dare un luogo fisico alla parola.
+          </div>
+        </ParallaxLayer>
+
+        <ParallaxLayer
+          offset={2.15}
+          speed={0.4} // slightly slower speed for the title
+          style={{
+            display: "flex",
+            justifyContent: "flex-start",
+            zIndex: 3, // add this line
+            pointerEvents: "none",
+          }}
+        >
+          <div
+            className={`${styles.loremIpsumLorem} ${styles.headerText}`} // Apply the 'text-big-bold' class
+            style={{ marginLeft: "7%", fontSize: "5em", color: "#3a4660" }} // Increase the font size here
+          >{`Un colore, una personalità`}</div>
+        </ParallaxLayer>
+
+        <ParallaxLayer
+          offset={2.05}
+          speed={0.3}
+          style={{
+            display: "flex",
+            justifyContent: "flex-start",
+            alignItems: "center",
+            zIndex: 2, // add this line
+          }}
+        >
+          <div className="container">
+            <div className="overlay-background" />
+            <div className="overlay-border" />
+            <div className="row h-100">
+              <div
+                className="col d-flex flex-column flex-md-row "
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "repeat(3, 1fr)",
+                  gap: "1em",
+                  placeItems: "center",
+                }}
+              >
+                {cards.map((card) => (
+                  <FlipCard key={card.id} card={card} />
+                ))}
+              </div>
+            </div>
+          </div>
+        </ParallaxLayer>
+        <ParallaxLayer
+          offset={2.4}
+          speed={0.7}
+          style={{
+            display: "flex",
+            justifyContent: "flex-start",
+            alignItems: "center",
+            pointerEvents: "none",
+            zIndex: 1, // add this line
+          }}
+        >
+          <div className="container">
+            <div className="row">
+              <div
+                className="col d-flex flex-column flex-md-row "
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "repeat(3, 1fr)",
+                  gap: "1em",
+                }}
+              >
+                {cards.map((card) => (
+                  <div style={{ fontSize: "2.3em", color: "#3a4660" }}>
+                    {card.description}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </ParallaxLayer>

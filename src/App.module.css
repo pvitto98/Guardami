@@ -1,0 +1,103 @@
+.dsc12771Icon,
+.dsc12771Wrapper {
+  align-self: stretch;
+  flex: 1;
+  overflow: hidden;
+}
+.dsc12771Icon {
+  position: relative;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+.dsc12771Wrapper {
+  background-color: var(--color-linen);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.loremIpsumIs,
+.loremIpsumLorem {
+  position: relative;
+  font-size: clamp(1.5rem, 1rem + 2.5vw, 3.5rem);
+  font-weight: bold;
+}
+.loremIpsumIs {
+  align-self: stretch;
+}
+.loremIpsumIsSimplyDummyTeParent,
+.loremIpsumLoremParent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.loremIpsumIsSimplyDummyTeParent {
+  padding: 0 var(--padding-8xs);
+  gap: var(--gap-3xs);
+  font-size: var(--font-size-lg);
+}
+.loremIpsumLoremParent {
+  flex: 1;
+  padding: var(--padding-3xs);
+  gap: var(--gap-xl);
+}
+.frameParent,
+.frameWrapper {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+}
+.frameWrapper {
+  flex: 1;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--padding-21xl) var(--padding-xl);
+}
+.frameParent {
+  background-color: var(--color-seashell);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  height: 100vh;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: var(--padding-11xl);
+  box-sizing: border-box;
+  gap: var(--gap-3xs);
+  text-align: left;
+  font-size: var(--font-size-19xl);
+  color: var(--color-darkslategray);
+  font-family: var(--font-ubuntu);
+}
+
+.hiddenFromBottom {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(100%) scale(0.8);
+  transition: all 1.5s ease-out;
+}
+
+.showFromBottom {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0) scale(1);
+  transition: all 1.5s ease-out;
+}
+
+.loremIpsumLoremParent {
+    flex: 1;
+    padding: var(--padding-3xs);
+    gap: var(--gap-xl);
+  }
+  
+  .loremIpsumIsSimplyDummyTeParent,
+  .loremIpsumLoremParent {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }

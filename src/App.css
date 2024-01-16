@@ -21,7 +21,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: rgb(132 190 166)
 }
 
 .App-link {
@@ -36,3 +36,121 @@
     transform: rotate(360deg);
   }
 }
+
+.parallax-remove-scrollbar {
+	-webkit-scrollbar-display: none !important;
+	scrollbar-width: 0 !important;
+	overflow: hidden !important;
+}
+
+.headerText {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+@keyframes float {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(10px, 10px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes rise {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-50px);
+  }
+}
+
+@keyframes riseZoom {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-20px) scale(1);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* ".inherited-styles-for-exported-element" is a generated class for the inherited styles of the exported element, feel free to rename it. */
+
+.inherited-styles-for-exported-element {
+  color: #333;
+}
+
+h3 {
+  font-family: CerebriSans-Bold, -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+  font-size: 1.9em;
+  font-weight: 400;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+@media screen and (min-width: 1024px) {
+  h3 {
+    font-size: 2.5em;
+  }
+}
+
+
+/* Arrow first page */
+
+.arrow {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  transform: rotate(0deg);
+  cursor: pointer;
+}
+
+.arrow span {
+  display: block;
+  width: 2vw;
+  height: 1.5vw;
+  border-bottom: 8px solid white; /* increased from 5px to 10px */
+  border-right: 18px solid white; /* increased from 5px to 10px */
+  transform: rotate(45deg);
+  margin: -10px;
+  animation: animate 2s infinite;
+}
+
+.arrow span:nth-child(2) {
+  animation-delay: -0.2s;
+}
+
+.arrow span:nth-child(3) {
+  animation-delay: -0.4s;
+}
+
+@keyframes animate {
+  0% {
+      opacity: 0;
+      transform: rotate(45deg) translate(-20px, -20px);
+  }
+  50% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0;
+      transform: rotate(45deg) translate(20px, 20px);
+  }
+}
+

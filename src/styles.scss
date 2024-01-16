@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+
+.col {
+  display: flex;
+  justify-content: space-around; // or use 'space-evenly' for equal space around and between the elements
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  padding-right: 5%;
+  padding-left: 5%;
+}
+
+.flip-card-outer {
+  width: 20vw; // 20% of the viewport's width
+  height: 50vh; // 20% of the viewport's height
+  margin: 25px 0;
+  z-index: 1; // add this line
+
+  
+
+  &.focus-trigger:focus {
+    // outline: 5px solid greenyellow;
+    outline-offset: 5px;
+  }
+
+  .flip-card-inner {
+    perspective: 1000px; // Add perspective to the 3D space
+    transform-style: preserve-3d;
+    transition: .4s ease-in .2s;
+    position: relative;
+    width: inherit;
+    height: inherit;
+
+    &.hover-trigger:hover {
+      transform: rotateY(180deg);
+    }
+
+    &.showBack {
+      transform: rotateY(180deg);
+    }
+  
+    .card {
+      backface-visibility: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+  
+      &.front {
+        transform: rotateY(0);
+        background-color: #2d2d2d;
+        color: #fff;
+      }
+  
+      &.back {
+        transform: rotateY(180deg);
+        background-color: #fff;
+        color: #2d2d2d;
+      }
+
+      img {
+        width: '105px';
+      }
+    }
+  }
+}
+
+/* Top bar new style */
+
+header {
+  background: transparent;
+  color: white;
+  padding: .5rem 0;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // margin: 0 auto 0 0;
+  pointer-events: auto; ///to make the navbar clickable
+}
+
+
+.nav-container .logo {
+  font-size: 2rem; 
+  font-weight: bold; 
+}
+
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  color: #522910;
+  font-weight: bold; 
+  flex-grow: 1;
+}
+
+.nav--ul__one, .nav--ul__two {
+  margin: 0 auto 0 0;
+
+}
+
+.nav-container, .nav--ul__one,
+.nav--ul__two {
+  display: flex;
+  color: #522910;
+  gap: 3.6rem;
+  font-size: 1.4rem;
+}
+
+.nav--ul__two {
+  justify-content: flex-end;
+  flex: 1;
+  padding-right: 30px; // Add this line
+  padding-left: 30px; // Add this line
+
+}
+
+.hamburger-menu {
+  display: none; /* Hidden by default for larger screens */
+  cursor: pointer;
+}
+
+/* Remove blue highlight in links */
+a {
+  text-decoration: none;
+  color: '#522910';
+  font-weight: bold;
+
+  // font-family: 'Babes Neua';
+}
+
+.shopWrapper {
+  cursor: pointer;
+  border: 0;
+  padding: 8px var(--padding-11xl);
+  background-color: #ee8f32;
+  border-radius: 30px; // add this line to make the button rounded
+  width: 200px;
+  height: 60px;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  // margin-bottom: 18px; /*to be changed*/
+  margin-right: 5%;
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: #272C3E;
+  margin-right: 30px;
+}
+
+@media (max-width: 700px) {
+  .nav {
+      flex-direction: column;
+      gap: 2rem;
+  }
+
+  .nav--ul__one,
+  .nav--ul__two {
+      flex-direction: column;
+      gap: .6rem;
+      
+  }
+
+  .hamburger-menu {
+      display: block;
+      z-index: 2;
+  }
+
+  .nav {
+      position: absolute;
+      top: 0;
+      right: -100%;
+      bottom: 0;
+      width: 100%;
+      padding-top: 6rem;
+      align-items: center;
+      text-align: center;
+      background-color: #4D4DDB;
+      color: white;
+      transition: 0.15s ease-in-out;
+  }
+
+  .nav.active {
+      right: 0;
+  }
+}
+
+p {
+  margin: 100px;
+  // font-weight: bold;
+  // font-size: 70px;
+  text-align: center;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+
+// Scritta guardami
+
+.center{
+  color: #522910;
+  position: absolute;
+  margin-right: 50%; // add this line
+  text-align: center; // change this line
+  background-size: cover;
+  background-position: center; // center the background image
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: background-text-animation 8s infinite;
+  width: 50%;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); // add a shadow to the text
+}
+
+@keyframes background-text-animation {
+  0% {
+    background-image: url('https://images.unsplash.com/photo-1602848597941-0d3d3a2c1241?q=80&w=2075&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  }
+  25% {
+    background-image: url('https://images.unsplash.com/photo-1605721911519-3dfeb3be25e7?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3DD');
+  }
+  50% {
+    background-image: url('https://images.unsplash.com/photo-1532153955177-f59af40d6472?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  }
+  75% {
+    background-image: url('https://images.unsplash.com/photo-1591025810539-a321000cda85?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  }
+  100% {
+    background-image: url('https://images.unsplash.com/photo-1602848597941-0d3d3a2c1241?q=80&w=2075&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  }
+}
+
+.our-text p{
+  font-size: 130px;
+  text-transform: uppercase;
+  font-weight: 700;
+  height: 150px; // set a fixed height
+  transform: scaleY(1.5); // stretch the text in height
+}
+
+
+// Background image
+
+.ken {
+  animation: kenny 45s linear infinite;
+  background-image: url('https://images.unsplash.com/photo-1548704686-f0a484c1bd67?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzQ2ODk3NTI&ixlib=rb-4.0.3&q=80');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+  opacity: 1;
+  overflow: hidden;
+  transform: scale(1.2);
+}
+
+@keyframes kenny {
+  25% {
+    opacity: 0.9;
+    transform: translate(10px, 10px) scale(1.4);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-10px, -10px) scale(1.3);
+  }
+  75% {
+    opacity: 0.9;
+    transform: translate(10px, 10px) scale(1.4);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1.2);
+  }
+}
